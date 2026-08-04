@@ -1,0 +1,28 @@
+{
+  "updated_at": "2026-07-30",
+  "source": "Google Scholar",
+  "scholar_user_id": "e_gM0k8AAAAJ",
+  "publications": {
+    "ai4ai-at-scale": {
+      "citations": null
+    },
+    "evm-questbench": {
+      "citations": 3
+    },
+    "on-device-llms": {
+      "citations": 4
+    },
+    "agent2-rl-bench": {
+      "citations": 2
+    },
+    "twinrouterbench": {
+      "citations": 3
+    },
+    "structured-output-attribution": {
+      "citations": null
+    },
+    "aoi": {
+      "citations": 2
+    }
+  }
+}

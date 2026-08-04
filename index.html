@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Wanyi Chen's academic homepage. Research on AI4AI, agentic post-training, LLM agents, evaluation, and foundation models.">
+    <meta name="author" content="Wanyi Chen">
+    <title>Wanyi Chen (陈万毅)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Source+Serif+4:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css?v=20260730-4">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <img src="assets/profile.png" alt="Wanyi Chen" class="profile-photo">
+                <div class="header-text">
+                    <h1>Wanyi Chen (陈万毅)</h1>
+                    <p class="subtitle">AI4AI · Agentic Post-Training · Foundation Models</p>
+                    <p class="email-header">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:berryccc0904@gmail.com">berryccc0904@gmail.com</a>
+                    </p>
+                    <div class="social-links">
+                        <a href="https://scholar.google.com/citations?view_op=list_works&amp;hl=zh-CN&amp;user=e_gM0k8AAAAJ" target="_blank" rel="noreferrer">
+                            <i class="fas fa-graduation-cap"></i> Google Scholar
+                        </a>
+                        <a href="https://github.com/wanyichen06" target="_blank" rel="noreferrer">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/%E4%B8%87%E6%AF%85-%E9%99%88-b83467367/" target="_blank" rel="noreferrer">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                        <a href="#" id="wechat-link" onclick="showWechat(event)">
+                            <i class="fab fa-weixin"></i> WeChat
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experiences">Experiences</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="about">
+            <div class="about-text">
+                <p>
+                    Hi, I am <strong>Wanyi Chen (陈万毅)</strong>, an M.Eng. student at the
+                    Natural Language Processing Center,
+                    Soochow University, expected to graduate in 2028.
+                    My research focuses on <strong>AI4AI and agentic post-training</strong>. I build verifiable systems that enable AI to
+                    participate in improving AI itself, while studying how data, training, environments, and evaluation can produce
+                    more capable long-horizon agents—toward increasingly autonomous and general intelligence.
+                </p>
+                <p>
+                    I am currently working with <strong>XYZ AI Lab</strong> on AI4AI and Deep Research Agents.
+                    Previously, I was a research intern at <strong>Microsoft Research Asia</strong> and worked on LLM applications at
+                    <strong>ByteDance</strong> and <strong>NIO</strong>.
+                </p>
+            </div>
+        </section>
+
+        <section id="news">
+            <h2>News</h2>
+            <ul class="news-list" id="news-list">
+                <li class="news-item">
+                    <span class="news-date">07/2026:</span>
+                    Released the <a href="https://xyz-lab.ai/blogs/ai4ai-at-scale/assets/bounded-exploration-ai4ai-system-optimization.pdf" target="_blank" rel="noreferrer"><em>AI4AI at Scale</em></a> technical report and XYZ-Aquila models.
+                </li>
+                <li class="news-item">
+                    <span class="news-date">01/2026:</span>
+                    <a href="https://arxiv.org/abs/2601.06565" target="_blank" rel="noreferrer"><em>EVM-QuestBench</em></a> was accepted to ACL 2026 Main.
+                </li>
+                <li class="news-item">
+                    <span class="news-date">03/2026:</span>
+                    Our survey on <a href="https://link.springer.com/article/10.1007/s10462-026-11538-1" target="_blank" rel="noreferrer"><em>On-Device Large Language Models</em></a> was accepted by Artificial Intelligence Review.
+                </li>
+            </ul>
+            <div class="pagination">
+                <button class="pagination-btn" id="prev-btn" onclick="changePage(-1)">
+                    <i class="fas fa-chevron-left"></i> Previous
+                </button>
+                <span class="pagination-info">Page <span id="current-page">1</span> of <span id="total-pages">2</span></span>
+                <button class="pagination-btn" id="next-btn" onclick="changePage(1)">
+                    Next <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </section>
+
+        <section id="publications">
+            <h2>Publications</h2>
+            <p style="text-align:center;color:#666;font-size:.95rem;margin-top:-15px;margin-bottom:30px;">
+                * indicates equal contribution · Citations are synced weekly from Google Scholar ·
+                <a href="https://scholar.google.com/citations?view_op=list_works&amp;hl=zh-CN&amp;user=e_gM0k8AAAAJ" target="_blank" rel="noreferrer" style="color:#667eea;text-decoration:none;font-weight:500;">Google Scholar</a>
+            </p>
+
+            <div class="project-publication" data-publication-id="ai4ai-at-scale">
+                <div class="project-publication-header">
+                    <div>
+                        <div class="project-publication-title">AI4AI at Scale</div>
+                        <div class="project-publication-summary">
+                            A full-pipeline system for enhancing LLM agentic capabilities across
+                            <strong>Data, Training, Harness, and Inference</strong>, demonstrated through two Deep Search Agents.
+                        </div>
+                    </div>
+                    <div class="project-publication-actions">
+                        <a href="https://github.com/XYZ-AI-Lab" target="_blank" rel="noreferrer"><i class="fab fa-github"></i> Project</a>
+                    </div>
+                </div>
+                <div class="project-paper-list">
+                    <article class="project-paper">
+                        <div>
+                            <div class="project-paper-title">
+                                <a href="https://xyz-lab.ai/blogs/ai4ai-at-scale/assets/bounded-exploration-ai4ai-system-optimization.pdf" target="_blank" rel="noreferrer">AI4AI at Scale: A Full-Pipeline System for Enhancing LLM Agentic Capabilities</a>
+                                <span class="project-paper-scene">(Technical Report)</span>
+                            </div>
+                            <div class="project-paper-authors"><strong>Wanyi Chen</strong>, XYZ AI Lab, et al.</div>
+                            <div class="project-paper-meta">Technical Report, 2026</div>
+                            <div class="project-paper-desc">A bounded research workflow for improving complex agent systems through auditable experimentation and evaluation.</div>
+                        </div>
+                        <div class="project-paper-links">
+                            <a href="https://xyz-lab.ai/blogs/ai4ai-at-scale/assets/bounded-exploration-ai4ai-system-optimization.pdf" target="_blank" rel="noreferrer"><i class="fas fa-file-pdf"></i> Paper</a>
+                            <a href="https://huggingface.co/collections/XYZAILab/xyz-aquila" target="_blank" rel="noreferrer">🤗 Models</a>
+                            <a href="https://mp.weixin.qq.com/s/r8XCiqFTFcD5LVMJlbeghA" target="_blank" rel="noreferrer"><i class="fas fa-newspaper"></i> Media</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div class="publication" data-publication-id="evm-questbench">
+                <div class="pub-title">EVM-QuestBench: An Execution-Grounded Benchmark for Natural-Language Transaction Code Generation</div>
+                <div class="pub-authors">Pei Yang*, <strong>Wanyi Chen*</strong>, Ke Wang, Lynn Ai, Eric Yang, Tianyu Shi</div>
+                <div class="pub-venue accepted">ACL 2026 Main</div>
+                <div class="pub-tldr"><strong>TL;DR:</strong> An execution-grounded benchmark with atomic and composite EVM tasks, isolated forks, and post-state validation.</div>
+                <div class="pub-links">
+                    <a href="https://arxiv.org/abs/2601.06565" target="_blank" rel="noreferrer"><i class="fas fa-file-pdf"></i> arXiv</a>
+                    <a href="https://github.com/OpenEdgeHQ/EVM-quest-bench" target="_blank" rel="noreferrer"><i class="fab fa-github"></i> Code</a>
+                </div>
+                <div class="pub-metrics">
+                    <a class="metric-image-link" href="https://github.com/OpenEdgeHQ/EVM-quest-bench" target="_blank" rel="noreferrer" aria-label="GitHub stars for EVM-QuestBench"><img src="https://img.shields.io/github/stars/OpenEdgeHQ/EVM-quest-bench?style=flat-square&amp;logo=github&amp;label=stars&amp;labelColor=beige&amp;color=4285F4" alt="GitHub stars"></a>
+                    <a class="metric-image-link citation-metric" data-citation-id="evm-questbench" href="https://scholar.google.com/citations?user=e_gM0k8AAAAJ" target="_blank" rel="noreferrer" hidden><img alt="Google Scholar citations"></a>
+                </div>
+            </div>
+
+            <div class="publication" data-publication-id="on-device-llms">
+                <div class="pub-title">On-Device Large Language Models: A Survey of Model Compression and System Optimization</div>
+                <div class="pub-authors"><strong>Wanyi Chen</strong>, Junhao Wang, Yiwei Zhang, et al.</div>
+                <div class="pub-venue accepted">Artificial Intelligence Review, 2026</div>
+                <div class="pub-tldr"><strong>TL;DR:</strong> A full-stack taxonomy of model compression, inference systems, and on-device deployment, with a unified evaluation protocol.</div>
+                <div class="pub-links">
+                    <a href="https://link.springer.com/article/10.1007/s10462-026-11538-1" target="_blank" rel="noreferrer"><i class="fas fa-file-pdf"></i> Paper</a>
+                    <a href="https://github.com/LumosJiang/Awesome-On-Device-LLMs" target="_blank" rel="noreferrer"><i class="fab fa-github"></i> Resources</a>
+                </div>
+                <div class="pub-metrics">
+                    <a class="metric-image-link" href="https://github.com/LumosJiang/Awesome-On-Device-LLMs" target="_blank" rel="noreferrer" aria-label="GitHub stars for Awesome On-Device LLMs"><img src="https://img.shields.io/github/stars/LumosJiang/Awesome-On-Device-LLMs?style=flat-square&amp;logo=github&amp;label=stars&amp;labelColor=beige&amp;color=4285F4" alt="GitHub stars"></a>
+                    <a class="metric-image-link citation-metric" data-citation-id="on-device-llms" href="https://scholar.google.com/citations?user=e_gM0k8AAAAJ" target="_blank" rel="noreferrer" hidden><img alt="Google Scholar citations"></a>
+                </div>
+            </div>
+
+            <div class="publication" data-publication-id="agent2-rl-bench">
+                <div class="pub-title">Agent<sup>2</sup> RL-Bench: Can LLM Agents Engineer Agentic RL Post-Training?</div>
+                <div class="pub-authors"><strong>Wanyi Chen</strong>, Xiao Yang, Xu Yang, Tianming Sha, Qizheng Li, Zhuo Wang, Bowen Xian, Fang Kong, Weiqing Liu, Jiang Bian</div>
+                <div class="pub-venue preprint">Preprint, 2026</div>
+                <div class="pub-tldr"><strong>TL;DR:</strong> A three-level diagnostic benchmark testing whether LLM agents can autonomously build and close agentic RL post-training loops.</div>
+                <div class="pub-links">
+                    <a href="https://arxiv.org/abs/2604.10547" target="_blank" rel="noreferrer"><i class="fas fa-file-pdf"></i> arXiv</a>
+                    <a href="https://github.com/microsoft/RD-Agent/tree/main/rdagent/scenarios/rl/autorl_bench" target="_blank" rel="noreferrer"><i class="fab fa-github"></i> Code</a>
+                </div>
+                <div class="pub-metrics">
+                    <a class="metric-image-link" href="https://github.com/microsoft/RD-Agent" target="_blank" rel="noreferrer" aria-label="GitHub stars for RD-Agent"><img src="https://img.shields.io/github/stars/microsoft/RD-Agent?style=flat-square&amp;logo=github&amp;label=stars&amp;labelColor=beige&amp;color=4285F4" alt="GitHub stars"></a>
+                    <a class="metric-image-link citation-metric" data-citation-id="agent2-rl-bench" href="https://scholar.google.com/citations?user=e_gM0k8AAAAJ" target="_blank" rel="noreferrer" hidden><img alt="Google Scholar citations"></a>
+                </div>
+            </div>
+
+            <div class="publication" data-publication-id="twinrouterbench">
+                <div class="pub-title">TwinRouterBench: Fast Static and Live Dynamic Evaluation for Realistic Agentic LLM Routing</div>
+                <div class="pub-authors">Pei Yang*, <strong>Wanyi Chen*</strong>, Tongyun Yang, Pengbin Feng, Jiarong Xing, et al.</div>
+                <div class="pub-venue preprint">Preprint, 2026</div>
+                <div class="pub-tldr"><strong>TL;DR:</strong> A two-track benchmark combining fast execution-verified static routing evaluation with live end-to-end agent execution.</div>
+                <div class="pub-links">
+                    <a href="https://arxiv.org/abs/2605.18859" target="_blank" rel="noreferrer"><i class="fas fa-file-pdf"></i> arXiv</a>
+                    <a href="https://github.com/CommonstackAI/TwinRouterBench" target="_blank" rel="noreferrer"><i class="fab fa-github"></i> Code</a>
+                </div>
+                <div class="pub-metrics">
+                    <a class="metric-image-link" href="https://github.com/CommonstackAI/TwinRouterBench" target="_blank" rel="noreferrer" aria-label="GitHub stars for TwinRouterBench"><img src="https://img.shields.io/github/stars/CommonstackAI/TwinRouterBench?style=flat-square&amp;logo=github&amp;label=stars&amp;labelColor=beige&amp;color=4285F4" alt="GitHub stars"></a>
+                    <a class="metric-image-link citation-metric" data-citation-id="twinrouterbench" href="https://scholar.google.com/citations?user=e_gM0k8AAAAJ" target="_blank" rel="noreferrer" hidden><img alt="Google Scholar citations"></a>
+                </div>
+            </div>
+
+            <div class="publication" data-publication-id="structured-output-attribution">
+                <div class="pub-title">Attributing Structured-Output Gains in Function Calling: Interface Alignment versus Procedural Transfer</div>
+                <div class="pub-authors"><strong>Wanyi Chen</strong>, Daoyuan Chen, Fang Kong</div>
+                <div class="pub-venue preprint">Preprint, 2026</div>
+                <div class="pub-tldr"><strong>TL;DR:</strong> A gain-attribution protocol separating interface alignment from procedural transfer in function-calling skill injection.</div>
+                <div class="pub-links">
+                    <a href="https://arxiv.org/abs/2607.02595" target="_blank" rel="noreferrer"><i class="fas fa-file-pdf"></i> arXiv</a>
+                    <a href="https://github.com/wanyichen06/skill-injection-attribution" target="_blank" rel="noreferrer"><i class="fab fa-github"></i> Code</a>
+                </div>
+                <div class="pub-metrics">
+                    <a class="metric-image-link" href="https://github.com/wanyichen06/skill-injection-attribution" target="_blank" rel="noreferrer" aria-label="GitHub stars for skill injection attribution"><img src="https://img.shields.io/github/stars/wanyichen06/skill-injection-attribution?style=flat-square&amp;logo=github&amp;label=stars&amp;labelColor=beige&amp;color=4285F4" alt="GitHub stars"></a>
+                    <a class="metric-image-link citation-metric" data-citation-id="structured-output-attribution" href="https://scholar.google.com/citations?user=e_gM0k8AAAAJ" target="_blank" rel="noreferrer" hidden><img alt="Google Scholar citations"></a>
+                </div>
+            </div>
+
+            <div class="publication" data-publication-id="aoi">
+                <div class="pub-title">AOI: Turning Failed Trajectories into Training Signals for Autonomous Cloud Diagnosis</div>
+                <div class="pub-authors">Pei Yang*, <strong>Wanyi Chen*</strong>, Asuka Yuxi Zheng, Xueqian Li, Xiang Li, et al.</div>
+                <div class="pub-venue preprint">Preprint, 2026</div>
+                <div class="pub-tldr"><strong>TL;DR:</strong> A trainable multi-agent framework that combines safe read-write separation, Observer GRPO, and failed-trajectory evolution for cloud diagnosis.</div>
+                <div class="pub-links">
+                    <a href="https://arxiv.org/abs/2603.03378" target="_blank" rel="noreferrer"><i class="fas fa-file-pdf"></i> arXiv</a>
+                    <a href="https://github.com/OpenEdgeHQ/aoi" target="_blank" rel="noreferrer"><i class="fab fa-github"></i> Code</a>
+                </div>
+                <div class="pub-metrics">
+                    <a class="metric-image-link" href="https://github.com/OpenEdgeHQ/aoi" target="_blank" rel="noreferrer" aria-label="GitHub stars for AOI"><img src="https://img.shields.io/github/stars/OpenEdgeHQ/aoi?style=flat-square&amp;logo=github&amp;label=stars&amp;labelColor=beige&amp;color=4285F4" alt="GitHub stars"></a>
+                    <a class="metric-image-link citation-metric" data-citation-id="aoi" href="https://scholar.google.com/citations?user=e_gM0k8AAAAJ" target="_blank" rel="noreferrer" hidden><img alt="Google Scholar citations"></a>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <article class="personal-project">
+                <div class="personal-project-icon"><i class="fas fa-book-open"></i></div>
+                <div class="personal-project-content">
+                    <div class="personal-project-header">
+                        <a class="personal-project-title" href="https://github.com/wanyichen06/LLMInternSkill" target="_blank" rel="noreferrer">LLMInternSkill</a>
+                        <a class="metric-image-link" href="https://github.com/wanyichen06/LLMInternSkill" target="_blank" rel="noreferrer" aria-label="GitHub stars for LLMInternSkill"><img src="https://img.shields.io/github/stars/wanyichen06/LLMInternSkill?style=flat-square&amp;logo=github&amp;label=stars&amp;labelColor=beige&amp;color=4285F4" alt="GitHub stars"></a>
+                    </div>
+                    <p>A structured preparation guide for LLM algorithm and research internships, covering foundations, engineering practice, and interview preparation.</p>
+                    <div class="pub-links">
+                        <a href="https://github.com/wanyichen06/LLMInternSkill" target="_blank" rel="noreferrer"><i class="fab fa-github"></i> Repository</a>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section id="experiences">
+            <h2>Experiences</h2>
+
+            <div class="experience-item">
+                <img src="assets/logos/xyz.svg" alt="XYZ AI Lab logo" class="experience-logo">
+                <div class="exp-header">
+                    <div class="exp-title">XYZ AI Lab</div>
+                </div>
+                <div class="exp-role">Research Intern</div>
+                <div class="exp-advisor">Working on <strong>AI4AI, Deep Research Agents, and foundation models</strong>.</div>
+            </div>
+
+            <div class="experience-item">
+                <img src="assets/logos/microsoft.png" alt="Microsoft logo" class="experience-logo">
+                <div class="exp-header">
+                    <div class="exp-title">Microsoft Research Asia (MSRA)</div>
+                </div>
+                <div class="exp-role">Research Intern · Machine Learning Group</div>
+                <div class="exp-advisor">Research on <strong>LLM agents, agentic RL post-training, and evaluation</strong>.</div>
+            </div>
+
+            <div class="experience-item">
+                <img src="assets/logos/bytedance.png" alt="ByteDance logo" class="experience-logo">
+                <div class="exp-header">
+                    <div class="exp-title">ByteDance</div>
+                </div>
+                <div class="exp-role">LLM Algorithm Engineer · TikTok</div>
+                <div class="exp-advisor">LLM reasoning and post-training for production applications.</div>
+            </div>
+
+            <div class="experience-item">
+                <img src="assets/logos/nio.svg" alt="NIO logo" class="experience-logo">
+                <div class="exp-header">
+                    <div class="exp-title">NIO</div>
+                </div>
+                <div class="exp-role">LLM Algorithm Engineer</div>
+                <div class="exp-advisor">Code generation and knowledge-enhanced industrial applications.</div>
+            </div>
+
+            <div class="experience-item">
+                <img src="assets/logos/soochow.svg" alt="Soochow University logo" class="experience-logo">
+                <div class="exp-header">
+                    <div class="exp-title">Soochow University</div>
+                    <div class="exp-date">2025.09 – 2028.06</div>
+                </div>
+                <div class="exp-role">M.Eng. in Software Engineering</div>
+                <div class="exp-advisor">Natural Language Processing Center.</div>
+            </div>
+
+            <div class="experience-item">
+                <img src="assets/logos/jiangsu-university.png" alt="Jiangsu University logo" class="experience-logo">
+                <div class="exp-header">
+                    <div class="exp-title">Jiangsu University</div>
+                    <div class="exp-date">2021.09 – 2025.06</div>
+                </div>
+                <div class="exp-role">B.Eng. in Software Engineering</div>
+                <div class="exp-advisor">Rank 4/114 · Qiushi President's Medal.</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Wanyi Chen. All rights reserved.</p>
+            <p>Email: <a href="mailto:berryccc0904@gmail.com" style="color:#667eea;text-decoration:none;">berryccc0904@gmail.com</a></p>
+            <p style="margin-top:5px;font-size:.85rem;color:#333;font-weight:600;">Last Updated: August 4, 2026</p>
+        </div>
+    </footer>
+
+    <div id="wechat-modal" class="wechat-modal" onclick="closeWechat(event)">
+        <div class="wechat-content" onclick="event.stopPropagation()">
+            <span class="wechat-close" onclick="closeWechat()">&times;</span>
+            <h3><i class="fab fa-weixin" style="color:#09bb07;"></i> WeChat QR Code</h3>
+            <img src="assets/wechat.jpg" alt="WeChat QR Code" id="wechat-qr">
+            <p>Scan the QR code to connect on WeChat.</p>
+        </div>
+    </div>
+
+    <button id="backToTop" class="back-to-top" title="Back to top" aria-label="Back to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <script src="script.js?v=20260730-4"></script>
+</body>
+</html>

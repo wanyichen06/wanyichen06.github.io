@@ -1,0 +1,37 @@
+name: Update publication metrics manually
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Update Google Scholar citations
+        run: python scripts/update_metrics.py
+
+      - name: Commit updated metrics
+        run: |
+          if git diff --quiet -- data/metrics.json; then
+            echo "No metric changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/metrics.json
+          git commit -m "chore: update publication metrics"
+          git push
