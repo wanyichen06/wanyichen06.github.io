@@ -1349,3 +1349,16 @@
                 height: 45px;
             }
         }
+
+        /* Authorship note in the Publications section heading */
+        .section-note {
+            color: #c41e3a;
+            font-weight: 600;
+            font-size: 0.62em;
+            vertical-align: middle;
+            white-space: nowrap;
+        }
+
+        .project-paper-scene.contribution {
+            color: #2d7a4f;
+        }

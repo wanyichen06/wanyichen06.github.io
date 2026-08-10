@@ -6,6 +6,9 @@
     <meta name="description" content="Wanyi Chen's academic homepage. Research on AI4AI, agentic post-training, LLM agents, evaluation, and foundation models.">
     <meta name="author" content="Wanyi Chen">
     <title>Wanyi Chen (陈万毅)</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Source+Serif+4:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet">
@@ -79,22 +82,26 @@
             <ul class="news-list" id="news-list">
                 <li class="news-item">
                     <span class="news-date">07/2026:</span>
-                    Released the <a href="https://xyz-lab.ai/blogs/ai4ai-at-scale/assets/bounded-exploration-ai4ai-system-optimization.pdf" target="_blank" rel="noreferrer"><em>AI4AI at Scale</em></a> technical report and XYZ-Aquila models.
+                    <strong>Technical Report</strong>, released <a href="https://xyz-lab.ai/blogs/ai4ai-at-scale/assets/bounded-exploration-ai4ai-system-optimization.pdf" target="_blank" rel="noreferrer"><em>AI4AI at Scale</em></a>, a full-pipeline system for enhancing LLM agentic capabilities across data, training, harness, and inference.
                 </li>
                 <li class="news-item">
-                    <span class="news-date">01/2026:</span>
-                    <a href="https://arxiv.org/abs/2601.06565" target="_blank" rel="noreferrer"><em>EVM-QuestBench</em></a> was accepted to ACL 2026 Main.
+                    <span class="news-date">04/2026:</span>
+                    <strong>ACL 2026 Main</strong>, <a href="https://arxiv.org/abs/2601.06565" target="_blank" rel="noreferrer"><em>EVM-QuestBench</em></a> introduces execution-grounded evaluation for natural-language transaction code generation.
                 </li>
                 <li class="news-item">
                     <span class="news-date">03/2026:</span>
-                    Our survey on <a href="https://link.springer.com/article/10.1007/s10462-026-11538-1" target="_blank" rel="noreferrer"><em>On-Device Large Language Models</em></a> was accepted by Artificial Intelligence Review.
+                    <strong>Artificial Intelligence Review (CAS Q1 / Top Journal, IF 18.8)</strong>, our survey on <a href="https://link.springer.com/article/10.1007/s10462-026-11538-1" target="_blank" rel="noreferrer"><em>On-Device Large Language Models</em></a> presents a full-stack taxonomy of model compression, inference systems, and on-device deployment.
+                </li>
+                <li class="news-item">
+                    <span class="news-date">01/2026:</span>
+                    <strong>ICLR 2026</strong>, <a href="https://openreview.net/forum?id=rxwwncarWj" target="_blank" rel="noreferrer"><em>FedMC</em></a> calibrates heterogeneous federated representations by modeling their local nonlinear manifold geometry.
                 </li>
             </ul>
             <div class="pagination">
                 <button class="pagination-btn" id="prev-btn" onclick="changePage(-1)">
                     <i class="fas fa-chevron-left"></i> Previous
                 </button>
-                <span class="pagination-info">Page <span id="current-page">1</span> of <span id="total-pages">2</span></span>
+                <span class="pagination-info">Page <span id="current-page">1</span> of <span id="total-pages">1</span></span>
                 <button class="pagination-btn" id="next-btn" onclick="changePage(1)">
                     Next <i class="fas fa-chevron-right"></i>
                 </button>
@@ -102,9 +109,9 @@
         </section>
 
         <section id="publications">
-            <h2>Publications</h2>
+            <h2>Publications <span class="section-note">(First / Co-first Author)</span></h2>
             <p style="text-align:center;color:#666;font-size:.95rem;margin-top:-15px;margin-bottom:30px;">
-                * indicates equal contribution · Citations are synced weekly from Google Scholar ·
+                * indicates equal contribution ·
                 <a href="https://scholar.google.com/citations?view_op=list_works&amp;hl=zh-CN&amp;user=e_gM0k8AAAAJ" target="_blank" rel="noreferrer" style="color:#667eea;text-decoration:none;font-weight:500;">Google Scholar</a>
             </p>
 
@@ -141,6 +148,57 @@
                 </div>
             </div>
 
+            <div class="project-publication" data-publication-id="rd-agent-project">
+                <div class="project-publication-header">
+                    <div>
+                        <div class="project-publication-title">RD-Agent Project</div>
+                        <div class="project-publication-summary">
+                            A research line on <strong>autonomous ML/RL engineering agents</strong>, built on Microsoft Research's
+                            open-source RD-Agent framework. My work contributes the <strong>agentic RL post-training benchmark</strong>
+                            and its evaluation infrastructure.
+                        </div>
+                    </div>
+                    <div class="project-publication-actions">
+                        <a href="https://github.com/microsoft/RD-Agent" target="_blank" rel="noreferrer"><i class="fab fa-github"></i> Project</a>
+                    </div>
+                </div>
+                <div class="project-paper-list">
+                    <article class="project-paper">
+                        <div>
+                            <div class="project-paper-title">
+                                <a href="https://arxiv.org/abs/2604.10547" target="_blank" rel="noreferrer">Agent<sup>2</sup> RL-Bench: Can LLM Agents Engineer Agentic RL Post-Training?</a>
+                                <span class="project-paper-scene">(RL Post-Training Setting of RD-Agent)</span>
+                            </div>
+                            <div class="project-paper-authors"><strong>Wanyi Chen</strong>, Xiao Yang, Xu Yang, Tianming Sha, Qizheng Li, Zhuo Wang, Bowen Xian, Fang Kong, Weiqing Liu, Jiang Bian</div>
+                            <div class="project-paper-meta">arXiv preprint, 2026</div>
+                            <div class="project-paper-desc">A three-level diagnostic benchmark testing whether LLM agents can autonomously build and close agentic RL post-training loops. Integrated into Microsoft RD-Agent.</div>
+                        </div>
+                        <div class="project-paper-links">
+                            <a href="https://arxiv.org/abs/2604.10547" target="_blank" rel="noreferrer"><i class="fas fa-file-pdf"></i> arXiv</a>
+                            <a href="https://github.com/microsoft/RD-Agent/tree/main/rdagent/scenarios/rl/autorl_bench" target="_blank" rel="noreferrer"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </article>
+                    <article class="project-paper">
+                        <div>
+                            <div class="project-paper-title">
+                                <a href="https://github.com/microsoft/RD-Agent" target="_blank" rel="noreferrer">RD-Agent: Open-Source Framework for Autonomous R&amp;D Agents</a>
+                                <span class="project-paper-scene contribution">(Open-Source Contribution)</span>
+                            </div>
+                            <div class="project-paper-authors">Microsoft Research Asia · contributor</div>
+                            <div class="project-paper-meta">Microsoft Research Asia, 2026</div>
+                            <div class="project-paper-desc">Contributed the AutoRL-Bench framework and benchmark integrations, deterministic train/eval splits for reproducible grading, and evaluator hardening for reliable failure propagation.</div>
+                        </div>
+                        <div class="project-paper-links">
+                            <a href="https://github.com/microsoft/RD-Agent" target="_blank" rel="noreferrer"><i class="fab fa-github"></i> Repository</a>
+                            <a class="metric-image-link" href="https://github.com/microsoft/RD-Agent" target="_blank" rel="noreferrer" aria-label="GitHub stars for RD-Agent"><img src="https://img.shields.io/github/stars/microsoft/RD-Agent?style=flat-square&amp;logo=github&amp;label=stars&amp;labelColor=beige&amp;color=4285F4" alt="GitHub stars"></a>
+                            <a href="https://github.com/microsoft/RD-Agent/pull/1348" target="_blank" rel="noreferrer"><i class="fas fa-code-pull-request"></i> PR #1348</a>
+                            <a href="https://github.com/microsoft/RD-Agent/pull/1368" target="_blank" rel="noreferrer"><i class="fas fa-code-pull-request"></i> PR #1368</a>
+                            <a href="https://github.com/microsoft/RD-Agent/pull/1402" target="_blank" rel="noreferrer"><i class="fas fa-code-pull-request"></i> PR #1402</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
             <div class="publication" data-publication-id="evm-questbench">
                 <div class="pub-title">EVM-QuestBench: An Execution-Grounded Benchmark for Natural-Language Transaction Code Generation</div>
                 <div class="pub-authors">Pei Yang*, <strong>Wanyi Chen*</strong>, Ke Wang, Lynn Ai, Eric Yang, Tianyu Shi</div>
@@ -149,10 +207,6 @@
                 <div class="pub-links">
                     <a href="https://arxiv.org/abs/2601.06565" target="_blank" rel="noreferrer"><i class="fas fa-file-pdf"></i> arXiv</a>
                     <a href="https://github.com/OpenEdgeHQ/EVM-quest-bench" target="_blank" rel="noreferrer"><i class="fab fa-github"></i> Code</a>
-                </div>
-                <div class="pub-metrics">
-                    <a class="metric-image-link" href="https://github.com/OpenEdgeHQ/EVM-quest-bench" target="_blank" rel="noreferrer" aria-label="GitHub stars for EVM-QuestBench"><img src="https://img.shields.io/github/stars/OpenEdgeHQ/EVM-quest-bench?style=flat-square&amp;logo=github&amp;label=stars&amp;labelColor=beige&amp;color=4285F4" alt="GitHub stars"></a>
-                    <a class="metric-image-link citation-metric" data-citation-id="evm-questbench" href="https://scholar.google.com/citations?user=e_gM0k8AAAAJ" target="_blank" rel="noreferrer" hidden><img alt="Google Scholar citations"></a>
                 </div>
             </div>
 
@@ -167,29 +221,14 @@
                 </div>
                 <div class="pub-metrics">
                     <a class="metric-image-link" href="https://github.com/LumosJiang/Awesome-On-Device-LLMs" target="_blank" rel="noreferrer" aria-label="GitHub stars for Awesome On-Device LLMs"><img src="https://img.shields.io/github/stars/LumosJiang/Awesome-On-Device-LLMs?style=flat-square&amp;logo=github&amp;label=stars&amp;labelColor=beige&amp;color=4285F4" alt="GitHub stars"></a>
-                    <a class="metric-image-link citation-metric" data-citation-id="on-device-llms" href="https://scholar.google.com/citations?user=e_gM0k8AAAAJ" target="_blank" rel="noreferrer" hidden><img alt="Google Scholar citations"></a>
                 </div>
             </div>
 
-            <div class="publication" data-publication-id="agent2-rl-bench">
-                <div class="pub-title">Agent<sup>2</sup> RL-Bench: Can LLM Agents Engineer Agentic RL Post-Training?</div>
-                <div class="pub-authors"><strong>Wanyi Chen</strong>, Xiao Yang, Xu Yang, Tianming Sha, Qizheng Li, Zhuo Wang, Bowen Xian, Fang Kong, Weiqing Liu, Jiang Bian</div>
-                <div class="pub-venue preprint">Preprint, 2026</div>
-                <div class="pub-tldr"><strong>TL;DR:</strong> A three-level diagnostic benchmark testing whether LLM agents can autonomously build and close agentic RL post-training loops.</div>
-                <div class="pub-links">
-                    <a href="https://arxiv.org/abs/2604.10547" target="_blank" rel="noreferrer"><i class="fas fa-file-pdf"></i> arXiv</a>
-                    <a href="https://github.com/microsoft/RD-Agent/tree/main/rdagent/scenarios/rl/autorl_bench" target="_blank" rel="noreferrer"><i class="fab fa-github"></i> Code</a>
-                </div>
-                <div class="pub-metrics">
-                    <a class="metric-image-link" href="https://github.com/microsoft/RD-Agent" target="_blank" rel="noreferrer" aria-label="GitHub stars for RD-Agent"><img src="https://img.shields.io/github/stars/microsoft/RD-Agent?style=flat-square&amp;logo=github&amp;label=stars&amp;labelColor=beige&amp;color=4285F4" alt="GitHub stars"></a>
-                    <a class="metric-image-link citation-metric" data-citation-id="agent2-rl-bench" href="https://scholar.google.com/citations?user=e_gM0k8AAAAJ" target="_blank" rel="noreferrer" hidden><img alt="Google Scholar citations"></a>
-                </div>
-            </div>
 
             <div class="publication" data-publication-id="twinrouterbench">
                 <div class="pub-title">TwinRouterBench: Fast Static and Live Dynamic Evaluation for Realistic Agentic LLM Routing</div>
                 <div class="pub-authors">Pei Yang*, <strong>Wanyi Chen*</strong>, Tongyun Yang, Pengbin Feng, Jiarong Xing, et al.</div>
-                <div class="pub-venue preprint">Preprint, 2026</div>
+                <div class="pub-venue preprint">arXiv preprint, 2026</div>
                 <div class="pub-tldr"><strong>TL;DR:</strong> A two-track benchmark combining fast execution-verified static routing evaluation with live end-to-end agent execution.</div>
                 <div class="pub-links">
                     <a href="https://arxiv.org/abs/2605.18859" target="_blank" rel="noreferrer"><i class="fas fa-file-pdf"></i> arXiv</a>
@@ -197,37 +236,28 @@
                 </div>
                 <div class="pub-metrics">
                     <a class="metric-image-link" href="https://github.com/CommonstackAI/TwinRouterBench" target="_blank" rel="noreferrer" aria-label="GitHub stars for TwinRouterBench"><img src="https://img.shields.io/github/stars/CommonstackAI/TwinRouterBench?style=flat-square&amp;logo=github&amp;label=stars&amp;labelColor=beige&amp;color=4285F4" alt="GitHub stars"></a>
-                    <a class="metric-image-link citation-metric" data-citation-id="twinrouterbench" href="https://scholar.google.com/citations?user=e_gM0k8AAAAJ" target="_blank" rel="noreferrer" hidden><img alt="Google Scholar citations"></a>
                 </div>
             </div>
 
             <div class="publication" data-publication-id="structured-output-attribution">
                 <div class="pub-title">Attributing Structured-Output Gains in Function Calling: Interface Alignment versus Procedural Transfer</div>
                 <div class="pub-authors"><strong>Wanyi Chen</strong>, Daoyuan Chen, Fang Kong</div>
-                <div class="pub-venue preprint">Preprint, 2026</div>
+                <div class="pub-venue preprint">arXiv preprint, 2026</div>
                 <div class="pub-tldr"><strong>TL;DR:</strong> A gain-attribution protocol separating interface alignment from procedural transfer in function-calling skill injection.</div>
                 <div class="pub-links">
                     <a href="https://arxiv.org/abs/2607.02595" target="_blank" rel="noreferrer"><i class="fas fa-file-pdf"></i> arXiv</a>
                     <a href="https://github.com/wanyichen06/skill-injection-attribution" target="_blank" rel="noreferrer"><i class="fab fa-github"></i> Code</a>
                 </div>
-                <div class="pub-metrics">
-                    <a class="metric-image-link" href="https://github.com/wanyichen06/skill-injection-attribution" target="_blank" rel="noreferrer" aria-label="GitHub stars for skill injection attribution"><img src="https://img.shields.io/github/stars/wanyichen06/skill-injection-attribution?style=flat-square&amp;logo=github&amp;label=stars&amp;labelColor=beige&amp;color=4285F4" alt="GitHub stars"></a>
-                    <a class="metric-image-link citation-metric" data-citation-id="structured-output-attribution" href="https://scholar.google.com/citations?user=e_gM0k8AAAAJ" target="_blank" rel="noreferrer" hidden><img alt="Google Scholar citations"></a>
-                </div>
             </div>
 
             <div class="publication" data-publication-id="aoi">
                 <div class="pub-title">AOI: Turning Failed Trajectories into Training Signals for Autonomous Cloud Diagnosis</div>
-                <div class="pub-authors">Pei Yang*, <strong>Wanyi Chen*</strong>, Asuka Yuxi Zheng, Xueqian Li, Xiang Li, et al.</div>
-                <div class="pub-venue preprint">Preprint, 2026</div>
+                <div class="pub-authors">Pei Yang*, <strong>Wanyi Chen*</strong>, Asuka Yuxi Zheng*, Xueqian Li, Xiang Li, et al.</div>
+                <div class="pub-venue preprint">arXiv preprint, 2026</div>
                 <div class="pub-tldr"><strong>TL;DR:</strong> A trainable multi-agent framework that combines safe read-write separation, Observer GRPO, and failed-trajectory evolution for cloud diagnosis.</div>
                 <div class="pub-links">
                     <a href="https://arxiv.org/abs/2603.03378" target="_blank" rel="noreferrer"><i class="fas fa-file-pdf"></i> arXiv</a>
                     <a href="https://github.com/OpenEdgeHQ/aoi" target="_blank" rel="noreferrer"><i class="fab fa-github"></i> Code</a>
-                </div>
-                <div class="pub-metrics">
-                    <a class="metric-image-link" href="https://github.com/OpenEdgeHQ/aoi" target="_blank" rel="noreferrer" aria-label="GitHub stars for AOI"><img src="https://img.shields.io/github/stars/OpenEdgeHQ/aoi?style=flat-square&amp;logo=github&amp;label=stars&amp;labelColor=beige&amp;color=4285F4" alt="GitHub stars"></a>
-                    <a class="metric-image-link citation-metric" data-citation-id="aoi" href="https://scholar.google.com/citations?user=e_gM0k8AAAAJ" target="_blank" rel="noreferrer" hidden><img alt="Google Scholar citations"></a>
                 </div>
             </div>
 
@@ -315,7 +345,7 @@
         <div class="container">
             <p>&copy; 2026 Wanyi Chen. All rights reserved.</p>
             <p>Email: <a href="mailto:berryccc0904@gmail.com" style="color:#667eea;text-decoration:none;">berryccc0904@gmail.com</a></p>
-            <p style="margin-top:5px;font-size:.85rem;color:#333;font-weight:600;">Last Updated: August 4, 2026</p>
+            <p style="margin-top:5px;font-size:.85rem;color:#333;font-weight:600;">Last Updated: August 2026</p>
         </div>
     </footer>
 
