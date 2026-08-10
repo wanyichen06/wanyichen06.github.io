@@ -679,7 +679,7 @@
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
-            align-self: center;
+            align-self: start;
         }
 
         .project-paper-links a {
